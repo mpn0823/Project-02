@@ -7,8 +7,6 @@ const key = require("../config/keys");
 // Useful constants
 const endpoint = "https://www.boardgameatlas.com/api";
 
-
-
 // Function defs
 const apiSearch = async (title) =>
     (await fetch(`${endpoint}/search?name=${title}&client_id=${key.atlasID}`, { method: "Get" })).json();
