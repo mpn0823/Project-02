@@ -6,6 +6,10 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
 
+  // This route is just to test that handlebars is configured correctly
+  // Should probably be removed later
+  app.get("/exphbs-test",(req,res)=> res.render("home"));
+
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
